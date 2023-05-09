@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS superhero_db;
+CREATE DATABASE superhero_db;

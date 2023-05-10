@@ -1,6 +1,6 @@
 * {
         font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
-        background-color: #364f6b;
+        background-color: #35383c;
     }
     
     body {
@@ -37,7 +37,7 @@
     }
     
     button {
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 207, 200, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(207, 69, 0) 35%, rgb(248, 250, 250) 100%);
         color: white;
         padding: 14px 20px;
         margin: 8px 0;

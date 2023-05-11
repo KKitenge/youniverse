@@ -2,10 +2,10 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-const sequelize = new Sequelize('your_database_name', 'your_username', 'your_password', {
-  host: 'localhost',
-  dialect: 'mysql',
-});
+// const mySequelize = new Sequelize('your_database_name', 'your_username', 'your_password', {
+//   host: 'localhost',
+//   dialect: 'mysql',
+// });
 
 class User extends Model {
   checkPassword(loginPw) {

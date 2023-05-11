@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const { User, Post } = require('../models');
+const { User, Character } = require('../models');
 
 // Home route
 router.get('/', async (req, res) => {
   try {
-    const postData = await Post.findAll({
+    //Get all characters and JOIN with user data
+    const CharacterData = await Character.findAll({
       include: [
         {
           model: User,
@@ -13,10 +14,10 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const posts = postData.map((post) => post.get({ plain: true }));
+    const Characters = CharacterData.map((Character) => Character.get({ plain: true }));
 
     res.render('homepage', {
-      posts,
+      Characters,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -34,6 +35,8 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+
 
 // Sign-up route
 router.get('/signup', (req, res) => {

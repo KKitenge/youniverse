@@ -4,7 +4,6 @@ const { User, Character } = require('../models');
 // Home route
 router.get('/', async (req, res) => {
   try {
-    //Get all characters and JOIN with user data
     const CharacterData = await Character.findAll({
       include: [
         {
@@ -18,7 +17,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       Characters,
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.loggedIn || false, // Ensure a default value for loggedIn
     });
   } catch (err) {
     console.log(err);
@@ -35,8 +34,6 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-
-
 
 // Sign-up route
 router.get('/signup', (req, res) => {

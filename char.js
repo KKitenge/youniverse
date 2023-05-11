@@ -8,7 +8,7 @@ fetch('characters.json')
     // Create a card for each character
     data.forEach(character => {
       // Clone the card element for each character
-        //clone gets all characters/cards but this needs to be limited
+        //Clone gets all characters/cards but this needs to be limited
       const newCard = card.cloneNode(true);
 
       // Set the image source 
@@ -27,3 +27,22 @@ fetch('characters.json')
     });
   })
   .catch(error => console.error(error));
+
+  // Autocomplete bar
+    //Load names from json file, too hard otherwise
+  $(function() {
+    $.getJSON("characters.json", function(availableCharacters) {
+      $("#characters").autocomplete({
+        source: availableCharacters
+      });
+    });
+  });
+  
+//   $(function() {
+//     var availableCharacters = [
+//     ];
+//     $("#characters").autocomplete({
+//       source: availableCharacters
+//     });
+//   });
+  

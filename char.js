@@ -1,43 +1,48 @@
+let container = document.querySelector(".container")
+let loadMoreBtn = document.querySelector("#load_more")
+
 // Fetch data from json file
-fetch('characters.json')
-  .then(response => response.json())
-  .then(data => {
-    // Get the card element
-    const card = document.querySelector('.card');
+async function fetchCharacters() {
+  const res = await fetch("characters.json")
+  const data = await res.json()
 
-    // Create a card for each character
-    data.forEach(character => {
-      // Clone the card element for each character
-        //Clone gets all characters/cards but this needs to be limited
-      const newCard = card.cloneNode(true);
+  // Create a card for each character
+  data.splice(0, 6).forEach(character => {
+    //let x = 0
+    //x += 5 // x = x(old) + 5
+    container.innerHTML += `
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="${character.images.md}" alt="${character.name}">
+            <div class="card-body">
+                <h5 class="card-name">${character.name}</h5>
+                <p class="card-fullName">${character.biography.fullName}</p>
+                <p class="card-placeOfBirth">${character.biography.placeOfBirth}</p>
+                <p class="card-race">${character.appearance.race}</p>
+                <p class="card-gender">${character.appearance.gender}</p>
+                <p class="card-alignment">${character.biography.alignment.toUpperCase()}</p>
+                <button class="favorite-button">Add to favorites</button>
+            </div>
+        </div>
+        `})
+}
+fetchCharacters()
 
-      // Set the image source 
-      newCard.querySelector('.card-img-top').src = character.images.md;
+loadMoreBtn.addEventListener("click", () => {
 
-      // The character description/text
-      newCard.querySelector('.card-name').textContent = character.name;
-      newCard.querySelector('.card-fullName').textContent = character.biography.fullName;
-      newCard.querySelector('.card-placeOfBirth').textContent = character.biography.placeOfBirth;
-      newCard.querySelector('.card-race').textContent = character.appearance.race;
-      newCard.querySelector('.card-gender').textContent = character.appearance.gender;
-      newCard.querySelector('.card-alignment').textContent = character.biography.alignment.toUpperCase();
+})
 
-      // Add the new card to the page
-      document.body.appendChild(newCard);
-    });
-  })
-  .catch(error => console.error(error));
-
-  // Autocomplete bar
-    //Load names from json file, too hard otherwise
-  $(function() {
-    $.getJSON("characters.json", function(availableCharacters) {
-      $("#characters").autocomplete({
-        source: availableCharacters
-      });
+// Autocomplete bar
+//Load names from json file, too hard otherwise
+$(function () {
+  $.getJSON("characters.json", function (characters) {
+    $("#characters").autocomplete({
+      source: characters.map(function (character) {
+        return character.name;
+      })
     });
   });
-  
+});
+
 //   $(function() {
 //     var availableCharacters = [
 //     ];
@@ -45,4 +50,3 @@ fetch('characters.json')
 //       source: availableCharacters
 //     });
 //   });
-  

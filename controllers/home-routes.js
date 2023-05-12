@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       Characters,
-      loggedIn: req.session.loggedIn || false, // Ensure a default value for loggedIn
+      loggedIn: req.session.loggedIn || false,
     });
   } catch (err) {
     console.log(err);
@@ -35,7 +35,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// Sign-up route
+// Sign-up route (GET)
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/dashboard');
@@ -43,6 +43,20 @@ router.get('/signup', (req, res) => {
   }
 
   res.render('signup');
+});
+
+// Sign-up route (POST)
+router.post('/signup', async (req, res) => {
+  try {
+    const userData = await User.create(req.body);
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.loggedIn = true;
+      res.status(200).json({ message: 'Signup successful' });
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

@@ -1,31 +1,13 @@
-<section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+<body>
+    <h1>Character Search and Results</h1>
+    <div class="center-container">
+        <div class="ui-widget">
+            <label for="characters">Search: </label>
+            <input id="characters">
+        </div>
+    </div>
+    <div class="container">
     </div>
     <div>
-      <label for="post-content">Post Content</label>
-      <textarea name="post-content"></textarea>
+        <button id="load_more">Load More...</button>
     </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
-
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
-<script src="/javascript/add-post.js"></script>

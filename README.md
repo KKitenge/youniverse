@@ -10,6 +10,7 @@ The motivation behind this was to create a dynamic website designed exclusively 
 ![EXAMPLE](./public/images/newlogo2.png)
 ![EXAMPLE](./public/images/LOG%20IN.png)
 
+[Video Link of Deployed application](https://app.screencast.com/K7rUVCMRdrINU)
 
 ## Usage
 1. Visit the webpage link and click “Login” for returning users or “Sign up” for new users

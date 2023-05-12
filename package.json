@@ -26,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/KKitenge/youniverse/issues"
   },
-  "homepage": "https://github.com/KKitenge/youniverse#readme"
+  "homepage": "https://github.com/KKitenge/youniverse#readme",
+  "devDependencies": {}
 }

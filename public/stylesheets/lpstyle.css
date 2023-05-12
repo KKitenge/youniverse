@@ -18,7 +18,7 @@ body {
 }
 
 a {
-    color: pink;
+    color: rgb(252, 246, 247);
 }
 
 a:visited {
@@ -73,7 +73,7 @@ button:hover {
    justify-content: center;
 }
 
-footer {
+.footer {
     /* position: fixed; */
     bottom: 0;
     width: 100%;

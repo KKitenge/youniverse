@@ -6,6 +6,7 @@
 
 body {
     text-align: center;
+    background-color: #8d0105;
 }
 
 .card {
@@ -21,7 +22,7 @@ a {
 }
 
 a:visited {
-    color: #009c97;
+    color: #0c0c0c;
 }
 
 a:link {
@@ -77,6 +78,7 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 3rem 1.5rem 6rem;
+    text-align: center;
 }
 
 @media screen and (max-width: 300px) {

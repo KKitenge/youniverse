@@ -1,24 +1,21 @@
 <body>
-  <h1>Characters</h1>
-  <div class="center-container"></div>
-  <div class="container">
-    {{#each Characters}}
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="{{this.images.md}}" alt="{{this.name}}">
-      <div class="card-body">
-        <h5 class="card-name">{{this.name}}</h5>
-        <p class="card-fullName">{{this.biography.fullName}}</p>
-        <p class="card-placeOfBirth">{{this.biography.placeOfBirth}}</p>
-        <p class="card-race">{{this.appearance.race}}</p>
-        <p class="card-gender">{{this.appearance.gender}}</p>
-        <p class="card-alignment">{{this.biography.alignment}}</p>
-      </div>
+    <h1>Characters</h1>
+    <div class="center-container">
     </div>
-    {{/each}}
-  </div>
-  <div>
-    <button id="load_more">Load More...</button>
-  </div>
-
-<script src="/char.js"></script>
-
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            {{!-- <img class="card-img-top" src="${character.images.md}" alt="${character.name}"> --}}
+            {{!-- <div class="card-body">
+                <h5 class="card-name">${character.name}</h5>
+                <p class="card-fullName">${character.biography.fullName}</p>
+                <p class="card-placeOfBirth">${character.biography.placeOfBirth}</p>
+                <p class="card-race">${character.appearance.race}</p>
+                <p class="card-gender">${character.appearance.gender}</p>
+                <p class="card-alignment">${character.biography.alignment}</p>
+            </div> --}}
+        </div>
+    </div>
+    <div>
+        <button id="load_more">Load More...</button>
+    </div>
+    <script src="/javascript/char.js"></script>

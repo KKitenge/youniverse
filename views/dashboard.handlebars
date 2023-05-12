@@ -1,13 +1,24 @@
 <body>
-    <h1>Character Search and Results</h1>
-    <div class="center-container">
-        <div class="ui-widget">
-            <label for="characters">Search: </label>
-            <input id="characters">
-        </div>
+  <h1>Characters</h1>
+  <div class="center-container"></div>
+  <div class="container">
+    {{#each Characters}}
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{this.images.md}}" alt="{{this.name}}">
+      <div class="card-body">
+        <h5 class="card-name">{{this.name}}</h5>
+        <p class="card-fullName">{{this.biography.fullName}}</p>
+        <p class="card-placeOfBirth">{{this.biography.placeOfBirth}}</p>
+        <p class="card-race">{{this.appearance.race}}</p>
+        <p class="card-gender">{{this.appearance.gender}}</p>
+        <p class="card-alignment">{{this.biography.alignment}}</p>
+      </div>
     </div>
-    <div class="container">
-    </div>
-    <div>
-        <button id="load_more">Load More...</button>
-    </div>
+    {{/each}}
+  </div>
+  <div>
+    <button id="load_more">Load More...</button>
+  </div>
+
+<script src="/char.js"></script>
+

@@ -33,7 +33,7 @@ const sess = {
 app.use(session(sess));
 
 // Signup route
-app.post('/signup', async (req, res) => {
+app.post('/signup', async (req, res) => { 
   try {
     const newUser = await User.create({
       username: req.body.username,

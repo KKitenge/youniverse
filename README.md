@@ -7,6 +7,9 @@ JavaScript | HTML | CSS | Express | MYSQL
 ## Description
 The motivation behind this was to create a dynamic website designed exclusively for fans of the Marvel Universe, where they can come together, explore their favorite characters, and create their personalized dashboards with their favorites.
 
+![EXAMPLE](./public/images/newlogo2.png)
+![EXAMPLE](./public/images/LOG%20IN.png)
+
 
 ## Usage
 1. Visit the webpage link and click “Login” for returning users or “Sign up” for new users

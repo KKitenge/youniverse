@@ -13,7 +13,7 @@
     "start": "node server.js"
   },
   "name": "youniverse",
-  "description": "",
+  "description": "## Technology Used JavaScript | HTML | CSS | Express | MYSQL",
   "version": "1.0.0",
   "main": "server.js",
   "repository": {

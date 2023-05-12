@@ -1,7 +1,7 @@
 # Youniverse
 
 ## Technology Used
-JavaScript | HTML | CSS | Express | MYSQL
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | [Express](https://expressjs.com/) | [MYSQL](https://www.npmjs.com/package/mysql2) | [Git](https://git-scm.com/) | [Looka](https://looka.com/) | [dotenv](https://www.npmjs.com/package/dotenv) | [Bootstrap](https://getbootstrap.com/)
 
 
 ## Description
@@ -18,11 +18,22 @@ The motivation behind this was to create a dynamic website designed exclusively 
 4. Once you return to your dash you’ll see all your favorite characters and their bios
 
 
-## Installation
-N/A
+## Credit
+We used character information from [Superhero API](https://akabab.github.io/superhero-api/api/#biography)
 
-## Test
-N/A
 
 ## License
-TBD
+[MIT](https://opensource.org/license/mit/) License
+
+## Team Info
+S.
+* [Github](https://github.com/Scar919)
+
+K.
+* [Github](https://github.com/KKitenge)
+
+J.
+* [Github](https://github.com/408broncos)
+
+
+

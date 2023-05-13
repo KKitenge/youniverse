@@ -1,5 +1,5 @@
 const User = require('./User');
-const Character = require('./Character');
+const Character = require('./character');
 const Favorite = require('./Favorite');
 
 User.hasMany(Character, {
